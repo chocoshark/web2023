@@ -1,14 +1,33 @@
 #nav {
     color: #fff;
     float: right;
-    margin: 0 100px 0 0;  
+    margin: 0 180px 0 0;
+    text-align: right;
+}
+
+.title-a {
+    font-size: xx-large;
+}
+
+.title-b {
+    font-size: xx-small;
+    font-style: italic;
 }
 
 
-#nav li a {
-	color: #fff;
-	background: #ec9350;
+table.a {
+    table-layout: fixed;
+    color: #fff;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f77b65+0,cc2702+51,fca567+100 */
+    background: linear-gradient(to bottom, #f77b65 0%, #cc2702 51%, #fe7940 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border-radius: 5px;
+    width: 790px;
+    height: 30px;
+    border: 1px #ffffff solid;
+    margin: 0 auto;
 }
+
 
 
 #main {
@@ -16,19 +35,23 @@
     margin: 0 auto;
     padding: 10px;
     width: 790px;
-    background: #f1dcdc;
-    border-radius: 20px;
+    height: 1100px;
+    background: #fff;
+    border-radius: 6px;
 }
 
 #main_title {
-    border-radius: 20px;
+    border-radius: 5px;
     margin: 0 auto;
+    background: #f95d08;
+    height: 120px;
+    color: #fff;
+    padding: 5px;
 }
 
 
 body {
     margin: 0 auto;
-    width: 1000px;
     padding: 0;
     background: url(../images/back_all.jpg) repeat-x top #2a0606;
     font-family: Helvetica, sans-serif;
@@ -37,12 +60,17 @@ body {
 }
 
 
-#content, #sidebar {
-	width: 360px;
-	margin: 0 0 0 0;
-	padding: 10px;
+#content,
+#sidebar {
+    width: 360px;
+    margin: 0px 0 20px 0;
+    padding: 10px;
+
 }
 
+a {
+    color:#db530a;
+}
 
 #content {
     float: left;
@@ -50,13 +78,18 @@ body {
 
 #content h1 {
     font-size: 2.4em;
-    margin: 0 10px 10px 0;
     color: #ffffff;
+    margin: auto;
+    border-radius: 5px;
+    width: 350px;
+    background: repeating-linear-gradient(135deg, rgba(254, 204, 177, 1) 5%, rgba(241, 116, 50, 1) 5%, rgba(234, 85, 7, 1) 12%, rgba(251, 149, 94, 1) 12%);
+    padding: 10px;
 }
 
 #content p {
     font-size: 1.4em;
     margin: 0 50px 10px 0;
+    width: 350px;
 }
 
 #sidebar {
@@ -67,5 +100,8 @@ body {
     font-size: 2.4em;
     margin: 0 0 10px 0;
     color: #ffffff;
+    border-radius: 5px;
+    width: 350px;
+    background: repeating-linear-gradient(135deg, rgba(254, 204, 177, 1) 5%, rgba(241, 116, 50, 1) 5%, rgba(234, 85, 7, 1) 12%, rgba(251, 149, 94, 1) 12%);
+    padding: 10px;
 }
-
