@@ -22,7 +22,7 @@ table.a {
     background: linear-gradient(to bottom, #f77b65 0%, #cc2702 51%, #fe7940 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     border-radius: 5px;
-    width: 790px;
+    width: 810px;
     height: 30px;
     border: 1px #ffffff solid;
     margin: 0 auto;
@@ -74,6 +74,7 @@ a {
 
 #content {
     float: left;
+    width: 500px;
 }
 
 #content h1 {
@@ -81,7 +82,7 @@ a {
     color: #ffffff;
     margin: auto;
     border-radius: 5px;
-    width: 350px;
+    width: 500px;
     background: repeating-linear-gradient(135deg, rgba(254, 204, 177, 1) 5%, rgba(241, 116, 50, 1) 5%, rgba(234, 85, 7, 1) 12%, rgba(251, 149, 94, 1) 12%);
     padding: 10px;
 }
@@ -94,6 +95,7 @@ a {
 
 #sidebar {
     float: right;
+    width:220px;
 }
 
 #sidebar h1 {
@@ -101,7 +103,7 @@ a {
     margin: 0 0 10px 0;
     color: #ffffff;
     border-radius: 5px;
-    width: 350px;
+    width: 200px;
     background: repeating-linear-gradient(135deg, rgba(254, 204, 177, 1) 5%, rgba(241, 116, 50, 1) 5%, rgba(234, 85, 7, 1) 12%, rgba(251, 149, 94, 1) 12%);
     padding: 10px;
 }
