@@ -1,0 +1,19 @@
+/*body {
+    background:
+        -webkit-linear-gradient(top, transparent 19px, blue 20px),
+        -webkit-linear-gradient(left, transparent 19px, blue 20px);
+    background-size: 20px 20px;
+}*/
+
+body{
+    background:
+                linear-gradient(45deg, transparent 5px, transparent 75px, #0346ff 75px, #0346ff 76px, transparent 77px, transparent 109px),
+                linear-gradient(-45deg, transparent 75px, transparent 76px, #0346ff 76px, #0346ff 77px, transparent 78px, transparent 109px);
+            background-size: 109px 109px, 109px 109px, 100% 6px;
+}
+
+#mean{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#32fffb+0,2989d8+50,1d6fb7+51,0e50ba+100 */
+background: linear-gradient(to bottom,  rgba(50,255,251,1) 0%,rgba(41,137,216,1) 50%,rgba(29,111,183,1) 51%,rgba(14,80,186,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
