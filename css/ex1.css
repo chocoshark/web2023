@@ -1,0 +1,78 @@
+body{
+    background: #000 url(../images/back_all.jpg) no-repeat center top; ;
+}
+
+#header{
+    width: 640px;
+    margin: 0 auto;
+    height: 135px;
+}
+#logo{
+    width: 640px;
+    height: 60px;
+
+    text-align: right;
+    color: #fff;
+}
+#logo h1{
+    font-size: 24px;
+    padding-right: 30px;
+    margin: 20px 0 0 0;
+}
+#logo h2{
+    font-size: 12px;
+    margin: 5px 0;
+    padding-right: 30px;
+}
+#menu{
+    width: 620px;
+    height: 40px;
+    background: linear-gradient(#de5b29 20%, #af3101 50%, #af3101 52%, #de5b29);
+    border: #fff solid 1px;
+    border-radius: 10px;
+}
+#menu ul{
+    list-style: none;
+    padding: 0px;
+    padding-left: 70px;
+    margin: 0;
+}
+#menu ul li{
+    float: left;
+    margin-top: 10px;
+}
+#menu ul li a{
+    display: block;
+    width: 110px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+#menu a:hover{
+    color: #ff0;
+}
+#main{
+    width: 620px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+#box{
+    background-color: #de5b29;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+}
+#content{
+    width: 400px;
+    float: left;
+}
+#content h3{
+    background-image: repeating-linear-gradient(-45deg, #ab674d 20%, #de5b29 25%, #ab674d 30%);
+    color: #fff;
+    height: 32px;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-box-reflect: below 0px linear-gradient(rgba(0,0,0,0.0) 10%, rgba(0,0,0,0.1) 60%);
+}
