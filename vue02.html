@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JSC</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ui>
+            <li v-for="item in todos">{{item.text}} {{item.due}}</li>
+        </ui>
+    </div>
+    <button onclick="myfunction()">Click me!</button>
+    
+<!--陣列-->
+
+    <script>
+
+
+        var myObject = new Vue({
+            el: '#app',
+            data: {
+                todos: [
+                    { text: 'Learn JS', due: "2023-10-27" },
+                    { text: 'Learn Vue', due: "2023-11-15" },
+                    { text: 'Build WebSite', due: "2023-10-27" }
+                ]
+            }
+        })
+
+        function myfunction() {
+            myObject.todos.push({ text: 'YA', due: "2024-1-1" })
+        }
+
+    </script>
+</body>
+
+
+
+</html>
