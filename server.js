@@ -43,14 +43,23 @@ server.get("/service", function(req, res){
 })
 
 server.get("/portfolio", function(req, res){
-    
-    PortfolioDB.find({}).then(results => {
-        if(results !=null){
-            res.send(results);
-        }else{
-            res.send("Error!")
-        }
-    }) 
+    //res.send("U Got it!");
+    var portfolio=[
+        {href: '#portfolioModal1', imgSrc:"img/portfolio/roundicons.png", title:"Round Icons", subtitle:"Graphic Design"},
+        {href: '#portfolioModal2', imgSrc:"img/portfolio/startup-framework.png", title:"Startup Framework", subtitle:"GrWebsite Design"},
+        {href: '#portfolioModal3', imgSrc:'img/portfolio/treehouse.png', title:'Treehouse', subtitle:'Website Design'},
+        {href: '#portfolioModal4', imgSrc:'img/portfolio/golden.png', title:'Golden', subtitle:'Website Design'},
+        {href: '#portfolioModal5', imgSrc:'img/portfolio/escape.png', title:'Escape', subtitle:'Website Design'},
+        {href: '#portfolioModal6', imgSrc:'img/portfolio/dreams.png', title:'Dreams', subtitle:'3D Design'}
+    ]
+    res.send(portfolio);
+    // PortfolioDB.find({}).then(results => {
+    //     if(results !=null){
+    //         res.send(results);
+    //     }else{
+    //         res.send("Error!")
+    //     }
+    // }) 
     
 })
 
@@ -67,3 +76,4 @@ server.post("/contact", function(req, res){
 server.listen(5500, function(){
     console.log("Server is running at port 8000!")
 })
+
