@@ -1,0 +1,83 @@
+#header {
+    text-align: right;
+}
+
+#header ul li {
+    display: inline;
+    padding: 15px;
+}
+
+li+li {
+    border-left: 2px solid #f94270;
+    margin: 15px, 15px, 0px, 15px;
+    height: 100%;
+}
+
+a:link {
+    /*設定還沒有瀏覽過的連結*/
+    color: #8b48f8;
+    text-decoration: none;
+}
+
+a:visited {
+    /*設定已經瀏覽過的連結*/
+    color: #f94270;
+}
+
+a:hover {
+    /*設定滑鼠移經的連結*/
+    text-decoration: underline;
+    color: #faff75;
+}
+
+a:active {
+    /*設定正在點選的連結*/
+    text-decoration: none;
+    color: #8eff92;
+}
+
+
+body {
+    background: #ffbeca;
+    padding: 15px;
+}
+
+p {
+    color: #952000;
+}
+
+
+
+/*巧克力介紹*/
+#introduce {
+    padding: 20px;
+    background-color: #ffe0e5;
+}
+
+/*留言板*/
+#contact {
+    text-align: center;
+    background-size: cover;
+    background-color: #ffe0e5;
+    padding: 20px;
+    height: 450px;
+}
+
+/*魔法師介紹*/
+#achao {
+    padding: 10px;
+}
+#img1 {/*魔法師圖片*/
+    border-radius: 20px;
+}
+
+/*區塊進場?*/
+#img{
+    background-size: cover;
+}
+
+footer {
+    margin: 5, 0, 5, 0;
+    padding: 10px;
+    background-color: #ffe0e5;
+}
