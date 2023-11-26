@@ -1,5 +1,14 @@
+header {
+    background: #ffbeca;
+}
+
 #header {
-    text-align: right;
+    right: 0;
+    margin-top: 2.5px;
+    position: fixed;
+    background: #ffe0e0;
+    padding: 10px;
+    height: 3em;
 }
 
 #header ul li {
@@ -7,11 +16,17 @@
     padding: 15px;
 }
 
-li+li {
-    border-left: 2px solid #f94270;
-    margin: 15px, 15px, 0px, 15px;
-    height: 100%;
-}
+/*設定導覽列分隔線*/
+li{
+    position: relative;
+   }
+   
+   li+li::before{
+     content:'|';
+     position: absolute;
+     left: 0;
+     color: #f94270
+   }
 
 a:link {
     /*設定還沒有瀏覽過的連結*/
@@ -67,12 +82,14 @@ p {
 #achao {
     padding: 10px;
 }
-#img1 {/*魔法師圖片*/
+
+#img1 {
+    /*魔法師圖片*/
     border-radius: 20px;
 }
 
 /*區塊進場?*/
-#img{
+#img {
     background-size: cover;
 }
 
