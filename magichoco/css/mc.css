@@ -1,6 +1,16 @@
 #header {
-    text-align: right;
+    width: 2000px; 
+    text-align: center;
 }
+
+#header2{
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+    background-color:#ffe0e5;
+    }
 
 #header ul li {
     display: inline;
@@ -9,8 +19,9 @@
 
 li+li {
     border-left: 2px solid #f94270;
-    margin: 15px, 15px, 0px, 15px;
-    height: 100%;
+    margin: 15px, 15px, 15px, 15px;
+    height: 10px;
+    text-align: right;
 }
 
 a:link {
@@ -39,7 +50,6 @@ a:active {
 
 body {
     background: #ffbeca;
-    padding: 15px;
 }
 
 p {
@@ -60,7 +70,7 @@ p {
     background-size: cover;
     background-color: #ffe0e5;
     padding: 20px;
-    height: 450px;
+    height: 500px;
 }
 
 /*魔法師介紹*/
@@ -76,8 +86,13 @@ p {
     background-size: cover;
 }
 
+
+
+
 footer {
     margin: 5, 0, 5, 0;
     padding: 10px;
     background-color: #ffe0e5;
 }
+
+
