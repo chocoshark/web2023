@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 server = express();
 var fs = require("fs");
 
-server.use(express.static(__dirname+"/ScrollTrigger"));//web root
+server.use(express.static(__dirname+"magichoco"));//web root
 //server.use(express.static("md110"));//web root
 server.use(bodyParser.urlencoded({extended:true}));
 server.use(bodyParser.json());
@@ -18,14 +18,12 @@ const formidable  = require('formidable')
 var DB = require("nedb-promises");
 var ContactDB = DB.create("contact.db");
 var PortfolioDB = DB.create("portfolio.db");
-// PortfolioDB.insert([
-//     { href: "#portfolioModal1", imgSrc: "img/portfolio/roundicons.png", title: "Round Icons", text: "Graphic Design" },
-//     { href: "#portfolioModal2", imgSrc: "img/portfolio/startup-framework.png", title: "Startup Framework", text: "Website Design" },
-//     { href: "#portfolioModal3", imgSrc: "img/portfolio/treehouse.png", title: "Treehouse", text: "Website Design" },
-//     { href: "#portfolioModal1", imgSrc: "img/portfolio/roundicons.png", title: "Round Icons", text: "Graphic Design" },
-//     { href: "#portfolioModal2", imgSrc: "img/portfolio/startup-framework.png", title: "Startup Framework", text: "Website Design" },
-//     { href: "#portfolioModal3", imgSrc: "img/portfolio/treehouse.png", title: "Treehouse", text: "Website Design" }
-// ])
+ PortfolioDB.insert([
+     { href: "#", imgSrc: "img/mc.jpg", title: "魔法戀愛巧", text: "初戀是什麼感覺？啊你沒初戀？來吃看看這塊巧克力吧！甜中帶苦，苦盡甘來……這就是初次戀愛的滋味鴨……！！" },
+     { href: "#", imgSrc: "img/mcc.jpg", title: "魔法松露", text: "圓圓可愛的松露裡面裝滿不同內餡，奶油、果仁、焦糖、棉花糖……還有大人口味的利口酒能選擇鴨！" },
+     { href: "#", imgSrc: "img/mcs.jpg", title: "魔法生巧", text: "滑順絲絨、新鮮似奶油的柔軟口感，入口即化，彷彿在吃軟綿綿少女的臉頰鴨～～" },
+     { href: "#", imgSrc: "img/mcsc.jpg", title: "魔法馬卡龍", text: "外酥內軟甜滋滋、口感紮實，又香又甜，有圓形、心型不同形狀，想要買來告白也可以鴨！" }
+ ])
  
  
 //var sharp=
