@@ -77,7 +77,7 @@
         </div>
 
         <!--介紹-->
-        <div class="shop">
+        <!-- <div class="shop">
             <div class="row" id="itcho">
                 <div class="col-md-6">
                     <h1>魔法戀愛巧</h1>
@@ -99,10 +99,33 @@
                 <div class="col-md-6">
                     <h1>魔法馬卡龍</h1>
                     <img src="img/mcsc.jpg" alt="魔法馬卡龍">
-                    <p>外酥內軟甜滋滋、口感紮實，又香又甜，有圓形、心型不同形狀，想要買來告白也可以鴨！ </p>
+                    <p>外酥內軟甜滋滋、口感紮實，又香又甜，有圓形、心型不同形狀，想要買來告白也可以鴨！</p>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+
+        <section id="portfolio" class="bg-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div v-for="item in Portfolio" class="col-md-4 col-sm-6 col-xs-12 portfolio-item ">
+                        <a v-bind:href="item.href" class="portfolio-link" data-bs-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img v-bind:src="item.imgSrc" class="w-100" alt="">
+                        </a>
+                        <div class="portfolio-caption " style="background: rgb(166, 250, 250);">
+                            <h4>{{item.title}}</h4>
+                            <p class="text-muted">{{item.title2}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!--區塊進場效果?https://medium.com/@jedy05097952/css-transition-%E8%BD%89%E5%A0%B4%E6%95%88%E6%9E%9C-87446be28c1
         <div class="img">
@@ -145,7 +168,7 @@
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <form name="sentMessage" id="contactForm" action="/contact">
+                    <form name="sentMessage" id="contactForm" action="/contact" method="post" ><!-- method="post"連結聯絡的資料庫方式 -->
                         <div class="col-md-12">
 
                             <div class="form-group">
@@ -205,5 +228,32 @@
     </footer>
 
 </body>
+
+<script src="vue/vue.min.js"></script>
+<script src="jquery/jquery.min.js"></script>
+
+<script>
+    var myObject = new Vue({
+        el: "#portfolio",
+          data: {Portfolio:[
+            // {href: "#portfolioModal1",imgSrc:"img/mc.jpg",title:"魔法戀愛巧",title2:"初戀是什麼感覺？啊你沒初戀？來吃看看這塊巧克力吧！甜中帶苦，苦盡甘來……這就是初次戀愛的滋味鴨……！！"},
+            // {href: "#portfolioModal1",imgSrc:"img/mcc.jpg",title:"魔法松露",title2:"圓圓可愛的松露裡面裝滿不同內餡，奶油、果仁、焦糖、棉花糖……還有大人口味的利口酒能選擇鴨！"},
+            // {href: "#portfolioModal1",imgSrc:"img/mcs.jpg",title:"魔法生巧",title2:"滑順絲絨、新鮮似奶油的柔軟口感，入口即化，彷彿在吃軟綿綿少女的臉頰鴨～～"},
+            // {href: "#portfolioModal1",imgSrc:"img/mcsc.jpg",title:"魔法馬卡龍",title2:"外酥內軟甜滋滋、口感紮實，又香又甜，有圓形、心型不同形狀，想要買來告白也可以鴨！"},
+            // {href: "#portfolioModal1",imgSrc:"img/mcsc.jpg",title:"魔法",title2:"外酥內軟甜滋滋、口感紮實，又香又甜，有圓形、心型不同形狀，想要買來告白也可以鴨！"}
+        ]} 
+    })
+    $.ajax({
+        url: "/portfolio",
+        method: "get",
+        dataType: "json",
+        success: function (data) {
+            myObject.Portfolio = data;
+        }
+    })   
+
+</script>
+
+
 
 </html>
