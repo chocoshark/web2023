@@ -23,7 +23,6 @@ var PortfolioDB = DB.create("portfolio.db");
 //     {href: "#portfolioModal1",imgSrc:"img/mcc.jpg",title:"魔法松露",title2:"圓圓可愛的松露裡面裝滿不同內餡，奶油、果仁、焦糖、棉花糖……還有大人口味的利口酒能選擇鴨！"},
 //     {href: "#portfolioModal1",imgSrc:"img/mcs.jpg",title:"魔法生巧",title2:"滑順絲絨、新鮮似奶油的柔軟口感，入口即化，彷彿在吃軟綿綿少女的臉頰鴨～～"},
 //     {href: "#portfolioModal1",imgSrc:"img/mcsc.jpg",title:"魔法馬卡龍",title2:"外酥內軟甜滋滋、口感紮實，又香又甜，有圓形、心型不同形狀，想要買來告白也可以鴨！"},
-//     {href: "#portfolioModal1",imgSrc:"img/mcsc.jpg",title:"魔法",title2:"外酥內軟甜滋滋、口感紮實，又香又甜，有圓形、心型不同形狀，想要買來告白也可以鴨！"}
 // ])
  
  
