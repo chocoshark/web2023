@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/mc.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="vue/vue.min.js"></script>
+    <script src="jquery/jquery.min.js"></script>
 </head>
 
 <body>
@@ -64,9 +66,10 @@
         </div>
 
         <!--區塊進場效果?
-        <div class="img" id="bg">
-            <img src="img/bg5.jpg" alt="">
+        <div class="img fade-copy fade-trigger" id="bg">
+            <img src="img/bg2.jpg" alt="">
         </div>-->
+
 
         <!--簡單介紹賣啥-->
         <div class="text-center" id="introduce">
@@ -109,7 +112,7 @@
 
         <!--介紹改資料庫-->
         <section id="portfolio" class="bg-light-gray">
-            <div class="container">
+            <div class="container" id="test">
                 <div class="row">
                     <div v-for="item in Portfolio" class="col-md-6 portfolio-item ">
                         <a v-bind:href="item.href" class="portfolio-link" data-bs-toggle="modal">
@@ -231,11 +234,40 @@
                 alt="YT"></a>
     </footer>
 
+    <!--動畫-->
+    <script>
+
+        gsap.to("#img1", {
+            scrollTrigger: {
+                trigger: "#achao",
+                start: "top 250px", //"top center", "10px 80%"
+                end: "bottom 100px",//"+=200"
+                toggleActions: "restart restart reset reset",//play播放, pause暫停, resume恢復, reverse倒退, complete完成, restart重新啟動, reset重置, or none或無
+                scrub: 1 //1 sec, or  srub:true start到end的時間 平滑擦洗，需要 1 秒才能「趕上」滾動條
+                //horizontal: true, 水平：真實
+            },
+            x: 470,
+            duration: 5//no use if scrub:1
+        });
+        //toggleActions:
+        //第一個參數代表: onEnter - 向下滾動，目標啟動點 與 視窗捲軸開始
+        //第二個參數代表: onLeave - 向下滾動，目標結束點 與 視窗捲軸結束
+        //第三個參數代表: onEnterBack - 向上滾動，目標結束點 與 視窗捲軸結束
+        //第四個參數代表: onLeaveBack - 向上滾動，目標啟動點 與 視窗捲軸開始
+        //Reference: https://www.thecodecreative.com/blog/gsap-scrolltrigger-toggle-actions
+
+
+
+    </script>
+
+
+
+
 
 </body>
 
-<script src="vue/vue.min.js"></script>
-<script src="jquery/jquery.min.js"></script>
+
+
 
 <!--資料庫-->
 <script>
@@ -258,7 +290,6 @@
             myObject.Portfolio = data;
         }
     })
-
 </script>
 
 

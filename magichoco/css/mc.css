@@ -12,6 +12,7 @@ header {
     background: #ffe0e0;
     padding: 10px;
     height: 3em;
+    z-index: 1;
 }
 
 #header ul li {
