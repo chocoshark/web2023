@@ -34,6 +34,11 @@
         </div>
     </header>
 
+    <div>
+        <img src="img/萌巧2.png" id="moco2">
+        <img src="img/萌巧3.png" id="moco3">
+    </div>
+
     <article>
 
         <!--輪播圖片-->
@@ -256,7 +261,42 @@
         //第四個參數代表: onLeaveBack - 向上滾動，目標啟動點 與 視窗捲軸開始
         //Reference: https://www.thecodecreative.com/blog/gsap-scrolltrigger-toggle-actions
 
+        // gsap.to("#bg", {
+        //     scrollTrigger: {
+        //         trigger: "#title",
+        //         start: "top 250px", //"top center", "10px 80%"
+        //         end: "bottom 100px",//"+=200"
+        //         toggleActions: "restart restart reset reset",//play, pause, resume, reverse, complete, restart, reset, or none.
+        //         scrub: 1 //1 sec, or  srub:true start到end的時間
+        //         //horizontal: true,
 
+        //     },
+        //     scale: 2,
+        //     duration: 5//no use if scrub:1
+        // });
+        //toggleActions:
+        //第一個參數代表: onEnter - 向下滾動，目標啟動點 與 視窗捲軸開始
+        //第二個參數代表: onLeave - 向下滾動，目標結束點 與 視窗捲軸結束
+        //第三個參數代表: onEnterBack - 向上滾動，目標結束點 與 視窗捲軸結束
+        //第四個參數代表: onLeaveBack - 向上滾動，目標啟動點 與 視窗捲軸開始
+        //Reference: https://www.thecodecreative.com/blog/gsap-scrolltrigger-toggle-actions
+
+
+
+
+        gsap.to("#moco2", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: 800
+        });
+        gsap.to("#moco3", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: -800,
+            scale : 0.5
+        });
 
     </script>
 
