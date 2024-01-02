@@ -12,10 +12,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script src="vue/vue.min.js"></script>
     <script src="jquery/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
-
+    <script>
+        AOS.init();
+      </script>
 
     <!--導覽列-->
     <header>
@@ -119,7 +123,7 @@
         <section id="portfolio" class="bg-light-gray">
             <div class="container" id="test">
                 <div class="row">
-                    <div v-for="item in Portfolio" class="col-md-6 portfolio-item ">
+                    <div v-for="item in Portfolio" class="col-md-6 portfolio-item " data-aos="flip-up">
                         <a v-bind:href="item.href" class="portfolio-link" data-bs-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
@@ -147,10 +151,15 @@
 
         <!--魔法廚師-->
         <div class="row" id="achao">
-            <div class="col-sm-6">
+            <div class="col-sm-6" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
                 <img src="img/巧.jpg" alt="" id="img1">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6"  data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500">
                 <br><br><br>
                 <h5>讓我們來隆重介紹......</h5>
                 <br>
@@ -171,9 +180,11 @@
         <!--留言板-->
         <section id="contact" style="background-image:url(img/巧2.jpg);">
 
-            <div class="container col-md-6">
+            <div class="container col-md-6" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
 
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center"  data-aos="fade-up"
+                data-aos-anchor-placement="center-center">
                     <h2 class="section-heading">連絡我鴨</h2>
                     <h3 class="section-subheading text-muted">快來找尋你最喜歡的戀愛巧克力滋味</h3>
                 </div>
@@ -243,19 +254,19 @@
     <!--動畫-->
     <script>
 
-        gsap.to("#img1", {
-            scrollTrigger: {
-                trigger: "#achao",
-                start: "top 250px", //"top center", "10px 80%"
-                end: "bottom 100px",//"+=200"
-                toggleActions: "restart restart reset reset",//play播放, pause暫停, resume恢復, reverse倒退, complete完成, restart重新啟動, reset重置, or none或無
-                scrub: 1 //1 sec, or  srub:true start到end的時間 平滑擦洗，需要 1 秒才能「趕上」滾動條
-                //horizontal: true, 水平：真實
-            },
-            opacity: 1,
-            x: 470,
-            duration: 5//no use if scrub:1
-        });
+        // gsap.to("#img1", {
+        //     scrollTrigger: {
+        //         trigger: "#achao",
+        //         start: "top 250px", //"top center", "10px 80%"
+        //         end: "bottom 100px",//"+=200"
+        //         toggleActions: "restart restart reset reset",//play播放, pause暫停, resume恢復, reverse倒退, complete完成, restart重新啟動, reset重置, or none或無
+        //         scrub: 1 //1 sec, or  srub:true start到end的時間 平滑擦洗，需要 1 秒才能「趕上」滾動條
+        //         //horizontal: true, 水平：真實
+        //     },
+        //     opacity: 1,
+        //     x: 470,
+        //     duration: 5//no use if scrub:1
+        // });
 
         //toggleActions:
         //第一個參數代表: onEnter - 向下滾動，目標啟動點 與 視窗捲軸開始
@@ -290,14 +301,14 @@
             scale: 1,
         });
 
-        gsap.from("#contact", {
-            scrollTrigger: {
-                scrub: 1
-            },
-            opacity: 1,
-            x: 800,
-            scale: 3,
-        });
+        // gsap.from("#contact", {
+        //     scrollTrigger: {
+        //         scrub: 1
+        //     },
+        //     opacity: 1,
+        //     x: 800,
+        //     scale: 3,
+        // });
 
 
     </script>
